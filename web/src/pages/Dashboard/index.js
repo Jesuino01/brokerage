@@ -68,7 +68,7 @@ export default function Dashboard() {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <FormCad />
+          <FormCad modalClose={() => setModalShow(false)} />
         </Modal.Body>
       </Modal>
     );

@@ -6,6 +6,7 @@ exports.up = function(knex) {
     table.string('descricao');
     table.string('fotos');
     table.string('cep');
+    table.string('cidade');
     table.string('logradouro');
     table.string('bairro');
     table.string('nro');

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React,
+{ useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Container, Card, Row, Form, Button } from 'react-bootstrap';
 import api from '../../services/api'
@@ -25,11 +26,29 @@ export default function Logon() {
   return (
     <>
       <Container>
-        <Row style={{ display: 'flex', alignItems: 'center', height: '100%', justifyContent: 'center' }} className="justify-content-md-center">
-          <Card style={{ marginTop: 100 }}>
-            <Card.Title style={{ marginTop: 20, fontSize: 30, justifyContent: 'center', alignItems: 'center', display: 'flex' }}>MGA Corretora</Card.Title>
+        <Row 
+          style={{ 
+            display: 'flex', 
+            alignItems: 'center',
+            height: '100%',
+            justifyContent: 'center' 
+          }} 
+          className="justify-content-md-center"
+        >
+          <Card style={{ width: 500, marginTop: 100 }}>
+            <Card.Title 
+              style={{ 
+                marginTop: 20,
+                fontSize: 30,
+                justifyContent: 'center',
+                alignItems: 'center',
+                display: 'flex',
+              }}
+            >
+              MGA Corretora
+            </Card.Title>
             <Card.Body>
-              <Form onSubmit={handleLogin} style={{ maxWidth: 500 }}>
+              <Form onSubmit={handleLogin}>
                 <Form.Group controlId="formBasicEmail">
                   <Form.Label>Login</Form.Label>
                   <Form.Control onChange={e => setLogin(e.target.value)} type="login" placeholder="Login" />

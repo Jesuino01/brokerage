@@ -19,6 +19,8 @@ module.exports = {
       titulo: data.titulo,
       descricao: data.descricao,
       fotos: fotosParse,
+      cep: data.cep,
+      cidade: data.cidade,
       logradouro: data.logradouro,
       bairro: data.bairro,
       nro: data.nro,
