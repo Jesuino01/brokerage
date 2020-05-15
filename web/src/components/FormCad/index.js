@@ -9,7 +9,6 @@ export default function FormCad({ modalClose }) {
   const [descricao, setDescricao] = useState('')
   const [logradouro, setLogradouro] = useState('')
   const [numero, setNumero] = useState('')
-  const [complemento, setComplemento] = useState('')
   const [bairro, setBairro] = useState('')
   const [cidade, setCidade] = useState('')
   const [cep, setCep] = useState('')
@@ -50,15 +49,9 @@ export default function FormCad({ modalClose }) {
           <Form.Control onChange={(e) => setTitulo(e.target.value)} placeholder="Título" />
         </Form.Group>
       </Form.Row>
-      <Form.Row>
-        <Form.Group>
-          <Form.Label>Descrição</Form.Label>
-          <Form.Control onChange={(e) => setDescricao(e.target.value)} style={{ minWidth: 400, minHeight: 120, resize: 'none' }} as="textarea" rows="3" />
-        </Form.Group>
-      </Form.Row>
 
       <Form.Row>
-        <Form.Group md="6" as={Col}>
+        <Form.Group md="9" as={Col}>
           <Form.Label>Logradouro</Form.Label>
           <Form.Control onChange={(e) => setLogradouro(e.target.value)} placeholder="Logradouro" />
         </Form.Group>
@@ -66,11 +59,6 @@ export default function FormCad({ modalClose }) {
         <Form.Group md="3" as={Col}>
           <Form.Label>Número</Form.Label>
           <Form.Control onChange={(e) => setNumero(e.target.value)} placeholder="Número" />
-        </Form.Group>
-
-        <Form.Group md="3" as={Col}>
-          <Form.Label>Complemento</Form.Label>
-          <Form.Control onChange={(e) => setComplemento(e.target.value)} placeholder="Complemento" />
         </Form.Group>
       </Form.Row>
 
@@ -92,7 +80,6 @@ export default function FormCad({ modalClose }) {
       </Form.Row>
 
       <Form.Row>
-
         <Form.Group as={Col}>
           <Form.Label>Metros</Form.Label>
           <Form.Control onChange={(e) => setMetros(e.target.value)} placeholder="Ex: 59" />
@@ -102,7 +89,13 @@ export default function FormCad({ modalClose }) {
           <Form.Label>Preço</Form.Label>
           <Form.Control onChange={(e) => setPreco(e.target.value)} placeholder="Ex: R$ 300.00,00" />
         </Form.Group>
+      </Form.Row>
 
+      <Form.Row>
+        <Form.Group>
+          <Form.Label>Descrição</Form.Label>
+          <Form.Control onChange={(e) => setDescricao(e.target.value)} style={{ minWidth: 400, minHeight: 120, resize: 'none' }} as="textarea" rows="3" />
+        </Form.Group>
       </Form.Row>
 
       <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
